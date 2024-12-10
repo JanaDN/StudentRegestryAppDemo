@@ -13,9 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    job-name:
-      permissions:
-        contents: write
+    permissions:
+      contents: write
+      pages: write
 
     strategy:
       matrix:
