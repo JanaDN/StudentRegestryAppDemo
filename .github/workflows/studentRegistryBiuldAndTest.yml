@@ -31,4 +31,5 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm start &
+    - run: chmod +x ./node modules/.bin/mocha
     - run: npm test
