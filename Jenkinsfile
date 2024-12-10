@@ -30,7 +30,7 @@ pipeline
                 script
                 {
                     bat 'npm install &'
-                    bat 'wait-on http://localhost:8090'
+                    bat 'wait-on http://localhost:8080'
                     bat 'npm test'
                 }
             }
