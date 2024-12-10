@@ -29,7 +29,7 @@ pipeline
             {
                 script
                 {
-                    bat 'npm install &'
+                    bat 'start /b npm start'
                     bat 'wait-on http://localhost:8080'
                     bat 'npm test'
                 }
