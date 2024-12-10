@@ -15,7 +15,7 @@ pipeline
         {
             steps
             {
-                checkout scm
+                git branch: 'main', url: 'https://github.com/JanaDN/StudentRegestryAppDemo' 
             }
         }
 
@@ -25,14 +25,7 @@ pipeline
             {
                 script
                 {
-                    if(isUnix())
-                    {
-                        sh 'npm install'
-                    }
-                    else
-                    {
-                        sh 'npm install'
-                    }
+                    bat 'npm install'
                 }
             }
         }
@@ -43,9 +36,9 @@ pipeline
             {
                 script
                 {
-                    sh 'npm install &'
-                    sh 'wait-on http://localhost:8090'
-                    sh 'npm test'
+                    bat 'npm install &'
+                    bat 'wait-on http://localhost:8090'
+                    bat 'npm test'
                 }
             }
         }
